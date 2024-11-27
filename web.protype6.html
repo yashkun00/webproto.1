@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Anime Information Website">
+    <title>Anime Info</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #000; /* Dark theme background */
+            color: silver; /* Text color for dark theme */
+        }
+
+        header {
+            position: relative;
+            background-image: url('ds.jpeg'); /* Demon Slayer header image */
+            background-size: cover;
+            background-position: center;
+            height: 300px;
+            color: white;
+            animation: fire-glow 1.5s infinite alternate; /* Fire animation */
+        }
+
+        header::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6); /* Dark overlay for readability */
+        }
+
+        @keyframes fire-glow {
+            0% {
+                box-shadow: 0 0 30px 10px rgba(255, 69, 0, 0.5);
+            }
+            100% {
+                box-shadow: 0 0 60px 20px rgba(255, 69, 0, 1);
+            }
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .site-name {
+            font-size: 36px;
+            font-weight: bold;
+            color: white; /* Bold white text */
+            margin: 0;
+        }
+
+        nav {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            display: flex;
+            gap: 15px;
+        }
+
+        nav a {
+            color: silver;
+            text-decoration: none;
+            font-size: 18px;
+            position: relative;
+            overflow: hidden; /* For water animation */
+        }
+
+        /* Home button style */
+        nav a:first-child {
+            color: white; /* Bold white */
+            font-weight: bold;
+        }
+
+        /* Ripple effect on Home button click */
+        nav a:first-child:active::before {
+            content: "";
+            position: absolute;
+            width: 300%;
+            height: 300%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(0, 255, 255, 0.4);
+            border-radius: 50%;
+            animation: ripple 1s ease-out;
+            z-index: 1;
+        }
+
+        @keyframes ripple {
+            0% {
+                width: 0;
+                height: 0;
+                opacity: 0.5;
+            }
+            100% {
+                width: 300%;
+                height: 300%;
+                opacity: 0;
+            }
+        }
+
+        nav a:hover {
+            color: #FFA500; /* Bright orange on hover */
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #FF4500; /* Fiery orange for headings */
+        }
+
+        .anime-section {
+            margin: 20px auto;
+            padding: 15px;
+            border: 1px solid #444;
+            background-color: #111;
+            border-radius: 8px;
+            max-width: 600px;
+            text-align: center;
+        }
+
+        .anime-section h3 {
+            color: #FFA500; /* Bright orange for anime names */
+        }
+
+        .anime-image {
+            width: 100%;
+            max-height: 300px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #222;
+            border-top: 2px solid #444;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1 class="site-name">Anime Info Hub</h1>
+            <p>All the details about your favorite anime in one place!</p>
+        </div>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Search</a>
+            <a href="#">&#x22EE;</a> <!-- 3-dot menu -->
+        </nav>
+    </header>
+
+    <main>
+        <h2>Top Anime Information</h2>
+
+        <!-- Anime Sections -->
+        <div class="anime-section">
+            <h3>One Piece</h3>
+            <img src="C:\Users\yash\OneDrive\STUDY\yash.clg\anime.web.2.jpg" alt="One Piece" class="anime-image">
+            <p><strong>Release Date:</strong> July 22, 1997</p>
+            <p><strong>Author:</strong> Eiichiro Oda</p>
+            <p><strong>Where to Watch:</strong> Crunchyroll, Netflix</p>
+        </div>
+
+        <div class="anime-section">
+            <h3>Dragon Ball</h3>
+            <img src="C:\Users\yash\OneDrive\STUDY\yash.clg\dbz.jpeg" alt="Dragon Ball" class="anime-image">
+            <p><strong>Release Date:</strong> December 3, 1984</p>
+            <p><strong>Author:</strong> Akira Toriyama</p>
+            <p><strong>Where to Watch:</strong> Funimation, Crunchyroll</p>
+        </div>
+
+        <div class="anime-section">
+            <h3>Attack on Titan</h3>
+            <img src="aot.jpeg" alt="Attack on Titan" class="anime-image">
+            <p><strong>Release Date:</strong> September 9, 2009</p>
+            <p><strong>Author:</strong> Hajime Isayama</p>
+            <p><strong>Where to Watch:</strong> Crunchyroll, Hulu</p>
+        </div>
+
+        <div class="anime-section">
+            <h3>Naruto</h3>
+            <img src="naruto.jpeg" alt="naruto" class="anime-image">
+            <p><strong>Release Date:</strong> September 21, 1999</p>
+            <p><strong>Author:</strong> Masashi Kishimoto</p>
+            <p><strong>Where to Watch:</strong> Netflix, Crunchyroll</p>
+        </div>
+
+        <div class="anime-section">
+            <h3>Demon Slayer</h3>
+            <img src="C:\Users\yash\OneDrive\STUDY\yash.clg\tanjiro.jpeg" alt="Demon Slayer" class="anime-image">
+            <p><strong>Release Date:</strong> February 15, 2016</p>
+            <p><strong>Author:</strong> Koyoharu Gotouge</p>
+            <p><strong>Where to Watch:</strong> Netflix, Funimation</p>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Anime Info Hub. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
